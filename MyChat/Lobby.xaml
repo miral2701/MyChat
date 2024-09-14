@@ -1,0 +1,32 @@
+﻿<Window x:Class="RegistrationWindow.Lobby"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RegistrationWindow"
+        mc:Ignorable="d"
+        Title="Lobby" Height="444" Width="800" >
+    <Grid Margin="0,0,0,-6">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF129C2D"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <ListBox Name="onlineListBox"   Margin="43,47,649,239"/>
+        <ListBox Name="offlineListBox"  Margin="43,226,649,60"/>
+        <ListBox Name="chatListBox" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="174,47,39,134"/>
+        <TextBox Name="textBox1" HorizontalAlignment="Left" Margin="174,314,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="587" Height="60"/>
+        <Button Content="Logout" HorizontalAlignment="Left" Margin="38,379,0,0" VerticalAlignment="Top" Width="113" Height="27" Click="Button_Click_2" />
+        <Button Content="Remove" HorizontalAlignment="Left" Margin="187,379,0,0" VerticalAlignment="Top" Width="113" Height="27" Click="Button_Click_1" />
+        <Button Content="Send" HorizontalAlignment="Left" Margin="648,379,0,0" VerticalAlignment="Top" Width="113" Height="27" Click="Button_Click" />
+        <TextBlock HorizontalAlignment="Center" Margin="0,-8,0,0" TextWrapping="Wrap" Text="MY CHAT" VerticalAlignment="Top" Height="55" Width="192" FontWeight="Bold" FontSize="36" TextDecorations="Underline" FontFamily="Comic Sans MS">
+            <TextBlock.Effect>
+                <DropShadowEffect/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <Label Content="Users Online" HorizontalAlignment="Left" Margin="43,20,0,0" VerticalAlignment="Top"/>
+        <Label Content="Users Offline" HorizontalAlignment="Left" Margin="43,199,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
